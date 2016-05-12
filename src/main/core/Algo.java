@@ -4,12 +4,12 @@ import java.util.ArrayList;
 
 public class Algo {
 	
-	public static void main(String[] args) {
+	public static ArrayList<String> algo(int width, int height, String text  ) {
 		
 		String alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ?";
-		int width = 4;
+		/*int width = 4;
 		int height = 5;
-		String text= "couco coucou";
+		String text= "JEssy";*/
 		ArrayList<String> ascii = new ArrayList<String>();
 		
 		ascii.add(" #  ##   ## ##  ### ###  ## # # ###  ## # # #   # # ###  #  ##   #  ##   ## ### # # # # # # # # # # ### ###  ");
@@ -39,15 +39,23 @@ public class Algo {
 			}
 		}
 		
+		ArrayList<String> response = new ArrayList<String>();
+		String str = ""	;
+			
 		//pour chaque ligne
 		for(int j = 0; j < height; j++) {
-			//Pour chaque lettre dans indexes
+			str = ""	;
+				//Pour chaque lettre dans indexes
 			for(int k = 0; k < indexes.size(); k++) {				
 				//A Chaque ligne (j), extrait les cararacère au bon index et les retournes
-				System.out.print(ascii.get(j).substring(indexes.get(k)*width, indexes.get(k)*width + width));
+				//System.out.print(ascii.get(j).substring(indexes.get(k)*width, indexes.get(k)*width + width));
+				//response.add(ascii.get(j).substring(indexes.get(k)*width, indexes.get(k)*width + width));
+				str += (ascii.get(j).substring(indexes.get(k)*width, indexes.get(k)*width + width));
 			}
-			System.out.println();
+			//System.out.println();
 		}
+		response.add(str);
+		return response;
 		
 	}
 
