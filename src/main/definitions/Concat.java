@@ -3,12 +3,11 @@ package main.definitions;
 import java.util.ArrayList;
 
 public class Concat extends AsciiBase {
-	
+	/*
 	@Override
 	public ArrayList<String> getPattern1() {
 		String alphabet = "A";//BCDEFGHIJKLMNOPQRSTUVWXYZ?";
 		ArrayList<String> pattern = new ArrayList<String>();
-		ArrayList<String> ascii = new ArrayList<String>();
 		ArrayList<String> lettreA = AsciiA.generatePattern1();
 		ArrayList<String> lettreB = AsciiB.generatePattern1();
 		ArrayList<String> lettreC = AsciiC.generatePattern1();
@@ -32,7 +31,7 @@ public class Concat extends AsciiBase {
 		/*for (String string : lettreAll) {
 			System.out.println(string);
 		}*/
-
+/*
 		return pattern;
-	}
+	}*/
 }
