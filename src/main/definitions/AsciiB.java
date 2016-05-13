@@ -1,4 +1,5 @@
-package definitions;
+package main.definitions;
+
 
 import java.util.ArrayList;
 

@@ -1,5 +1,4 @@
-package definitions;
-
+package main.definitions;
 import java.util.ArrayList;
 
 public class AsciiS extends Letters {
