@@ -3,7 +3,6 @@ package main.core;
 import java.util.ArrayList;
 import java.util.Random;
 
-import definitions.Concat;
 
 public class Game extends Algo {
 

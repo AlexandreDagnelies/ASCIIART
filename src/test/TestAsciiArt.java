@@ -2,11 +2,14 @@ package test;
 
 import org.junit.Test;
 
+import com.github.javafaker.Faker;
+
 public class TestAsciiArt {
 	
 	@Test
 	public boolean testWidth (int i) {
-		
+		Faker faker = new Faker();
+		String toto = faker.firstName();
 		if (0< i && i<30) {
 			return true;
 		} else {
