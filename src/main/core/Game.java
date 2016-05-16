@@ -35,8 +35,9 @@ public class Game extends Algo {
         System.out.println(randomString);
 		boolean nbrRandom = randomSize();
 		
-		ArrayList<String> algo = algo(Letters.getWidth(),Letters.getHeight(), randomString, printPattern(nbrRandom));
+		ArrayList<String> algo = algo(7,10, "MANHATTAN", printPattern(nbrRandom));
 		
+        
 		
 		 for (String string : algo ){
 			System.out.println(string);
