@@ -3,28 +3,24 @@ package main.core;
 import java.util.ArrayList;
 
 public class Algo {
-	
+	/**
+	 * 
+	 * @param width
+	 * @param height
+	 * @param text
+	 * @param ascii
+	 * @return ArrayList<String> 
+	 */
 	public static ArrayList<String> algo(int width, int height, String text, ArrayList<String> ascii  ) {
 		
 		String alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ?";
-		/*int width = 4;
-		int height = 5;
-		String text= "JEssy";*/
-		//ArrayList<String> ascii = new ArrayList<String>();
-		/*
-		ascii.add(" #  ##   ## ##  ### ###  ## # # ###  ## # # #   # # ###  #  ##   #  ##   ## ### # # # # # # # # # # ### ###  ");
-		ascii.add("# # # # #   # # #   #   #   # #  #    # # # #   ### # # # # # # # # # # #    #  # # # # # # # # # #   #   #  ");
-		ascii.add("### ##  #   # # ##  ##  # # ###  #    # ##  #   ### # # # # ##  # # ##   #   #  # # # # ###  #   #   #   ##  ");
-		ascii.add("# # # # #   # # #   #   # # # #  #  # # # # #   # # # # # # #    ## # #   #  #  # # # # ### # #  #  #        ");
-		ascii.add("# # ##   ## ##  ### #    ## # # ###  #  # # ### # # # #  #  #     # # # ##   #  ###  #  # # # #  #  ###  #  ");
-		
-			*/
 		
 		
-		//Trouve l'index n�cessaire � letter
+		
+		// Find the necessary index to the letter
 		
 				ArrayList<Integer> indexes = new ArrayList<Integer>();
-				//On met text en majuscule, et on le convertit en tableau
+				//text to uppercase and conversion table
 				
 				for(char c : text.toUpperCase().toCharArray()) {
 					
@@ -43,17 +39,15 @@ public class Algo {
 				
 				ArrayList<String> response = new ArrayList<String>();
 				String str = ""	;
-				//pour chaque ligne
+				//for each line
 				for(int j = 0; j < height; j++) {
 					str = ""	;
-						//Pour chaque lettre dans indexes
+						//For each letter in indexes
 					for(int k = 0; k < indexes.size(); k++) {				
-						//A Chaque ligne (j), extrait les cararac�re au bon index et les retournes
-						//System.out.print(ascii.get(j).substring(indexes.get(k)*width, indexes.get(k)*width + width));
-						//response.add(ascii.get(j).substring(indexes.get(k)*width, indexes.get(k)*width + width));
+						//At each line (j), extracts the character at the right indexes and go back in str
 						str += (ascii.get(j).substring(indexes.get(k)*width, indexes.get(k)*width + width));
 					}
-					//System.out.println();
+					//str added in ArrayList<String> response
 					response.add(str);
 					
 				}

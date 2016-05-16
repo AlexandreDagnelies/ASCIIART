@@ -14,39 +14,21 @@ public class Game extends Algo {
 		
 		String alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 		
-		
-		/*
-		ascii.add(" #  ##   ## ##  ### ###  ## # # ###  ## # # #   # # ###  #  ##   #  ##   ## ### # # # # # # # # # # ### ###  ");
-		ascii.add("# # # # #   # # #   #   #   # #  #    # # # #   ### # # # # # # # # # # #    #  # # # # # # # # # #   #   #  ");
-		ascii.add("### ##  #   # # ##  ##  # # ###  #    # ##  #   ### # # # # ##  # # ##   #   #  # # # # ###  #   #   #   ##  ");
-		ascii.add("# # # # #   # # #   #   # # # #  #  # # # # #   # # # # # # #    ## # #   #  #  # # # # ### # #  #  #        ");
-		ascii.add("# # ##   ## ##  ### #    ## # # ###  #  # # ### # # # #  #  #     # # # ##   #  ###  #  # # # #  #  ###  #  ");
-		*/
-		//ascii.add(Letters.printAsciiPattern1())
-		//
-		/*
-		//On ajoute chaque string Letters.printAsciiPattern1(); dans ascii.
-		for (String string : Letters.printAsciiPattern1() ){
-			//ascii.add(string);
-			//System.out.println(string);
-			
-		}*/
-		String randomString = randomString(new Random(), "alphabet", 10);
+		String randomString = randomString(new Random(), alphabet , 10);
         System.out.println(randomString);
 		boolean nbrRandom = randomSize();
 		
-		ArrayList<String> algo = algo(7,10, "MANHATTAN", printPattern(nbrRandom));
-		
-        
+		ArrayList<String> algo = algo(Letters.getWidth(),Letters.getHeight(), randomString, printPattern(nbrRandom));
 		
 		 for (String string : algo ){
 			System.out.println(string);
-			 
-			
 		}
 	}
 	
-	
+	/**
+	 * 
+	 * @return boolean
+	 */
 	public static boolean randomSize() {
 		ArrayList<String> ascii = new ArrayList<String>();
         if ((int)(Math.random() + 0.5) == 0) {
@@ -60,6 +42,11 @@ public class Game extends Algo {
         }
         
     }
+	/**
+	 * 
+	 * @param nbrRandom
+	 * @return ArrayList<String>
+	 */
 	public static  ArrayList<String> printPattern(boolean nbrRandom) {
 		ArrayList<String> ascii = new ArrayList<String>();
         System.out.println("Height = " + Letters.getHeight());
@@ -79,14 +66,16 @@ public class Game extends Algo {
     }
 	
 	/**
-	 * Generate a random string
 	 * 
+	 * @param nbr
+	 * @param alphabet
+	 * @param length
 	 * @return String
 	 */
-	public static String randomString(Random rng, String characters, int length) {
+	public static String randomString(Random nbr, String alphabet, int length) {
 		char[] text = new char[length];
 	    for (int i = 0; i < length; i++) {
-	        text[i] = characters.charAt(rng.nextInt(characters.length()));
+	        text[i] = alphabet.charAt(nbr.nextInt(alphabet.length()));
 	    }
 	    return new String(text);
 	}

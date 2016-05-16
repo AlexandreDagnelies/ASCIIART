@@ -96,13 +96,12 @@ public class Letters {
 	}
 
 	/**
-	 * 
+	 * return an array with letters of 4 by 5
 	 * @return ArrayList<String> pattern 
 	 */
 	public static ArrayList<String> printAsciiPattern1() {
 		Letters letter = null;
 		String line = "";
-		//La taille d'une lettre est égal à 5;
 		for (int i = 0; i < height; i++) {
 			for (char c : alphabet.toCharArray()) {
 
@@ -112,7 +111,6 @@ public class Letters {
 					} else {
 						letter = (Letters) Class.forName("main.definitions.Ascii" + c).newInstance();
 					}
-					// Pour chaque lettre on prend la string à l'index i;
 					line += letter.getPattern1().get(i);
 
 				} catch (InstantiationException e) {
@@ -130,14 +128,13 @@ public class Letters {
 	}
 
 	/**
-	 * 
+	 * return an array with letters of 7 by 10
 	 * @return ArrayList<String> pattern 
 	 */
 	 
 	public static ArrayList<String> printAsciiPattern2() {
 		Letters letter = null;
 		String line = "";
-		//La taille d'une lettre est égal à 10;
 		for (int i = 0; i < height; i++) {
 			for (char c : alphabet.toCharArray()) {
 
@@ -147,7 +144,6 @@ public class Letters {
 					} else {
 						letter = (Letters) Class.forName("main.definitions.Ascii" + c).newInstance();
 					}
-					// Pour chaque lettre on prend la string à l'index i;
 					line += letter.getPattern2().get(i);
 
 				} catch (InstantiationException e) {
