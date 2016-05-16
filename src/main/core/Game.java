@@ -46,7 +46,7 @@ public class Game extends Algo {
 	/**
 	 * 
 	 * @param nbrRandom
-	 * @return ArrayList<String>
+	 * @return ascii
 	 */
 	public static ArrayList<String> printPattern(boolean nbrRandom) {
 		ArrayList<String> ascii = new ArrayList<String>();
@@ -71,7 +71,7 @@ public class Game extends Algo {
 	 * @param nbr
 	 * @param alphabet
 	 * @param length
-	 * @return String
+	 * @return text
 	 */
 	public static String randomString(Random nbr, String alphabet, int length) {
 		char[] text = new char[length];

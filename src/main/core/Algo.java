@@ -9,7 +9,7 @@ public class Algo {
 	 * @param height
 	 * @param text
 	 * @param ascii
-	 * @return ArrayList<String> 
+	 * @return response 
 	 */
 	public static ArrayList<String> algo(int width, int height, String text, ArrayList<String> ascii  ) {
 		
