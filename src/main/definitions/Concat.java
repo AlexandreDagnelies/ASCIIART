@@ -2,7 +2,7 @@ package main.definitions;
 
 import java.util.ArrayList;
 
-public class Concat extends AsciiBase {
+public class Concat extends Letters {
 	/*
 	@Override
 	public ArrayList<String> getPattern1() {

@@ -5,6 +5,8 @@ import java.util.ArrayList;
 public class AsciiV extends Letters {
 	public AsciiV() {
 		this.realLetter ="V";
+		this.pattern1 = generatePattern1();
+		this.pattern2 = generatePattern2();
 	
 	}
 	

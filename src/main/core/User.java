@@ -14,12 +14,12 @@ public class User extends Game {
 		ascii.add("# # # # #   # # #   #   # # # #  #  # # # # #   # # # # # # #    ## # #   #  #  # # # # ### # #  #  #        ");
 		ascii.add("# # ##   ## ##  ### #    ## # # ###  #  # # ### # # # #  #  #     # # # ##   #  ###  #  # # # #  #  ###  #  ");
 		
-		ArrayList<String> coucou = algo(4, 5, "Jessy", ascii);
+		//ArrayList<String> coucou = algo(4, 5, "Jessy", ascii);
 		
-		
+		/*
 		for (String string : coucou){
 			System.out.println(string);
-		}
+		}*/
 	}
 
 }

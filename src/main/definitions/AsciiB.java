@@ -7,8 +7,8 @@ public class AsciiB extends Letters {
 	// Constructor
 	public AsciiB() {
 		this.realLetter ="B";
-		this.height = 3;
-		this.width = 5;
+		 this.pattern1 = generatePattern1();
+	     this.pattern2 = generatePattern2();
 	
 	}
 
@@ -18,7 +18,7 @@ public class AsciiB extends Letters {
 	        res.add("# # ");
 	        res.add("##  ");
 	        res.add("# # ");
-	        res.add("## ");
+	        res.add("##  ");
 	        return res;
 	    }
 
@@ -28,12 +28,12 @@ public class AsciiB extends Letters {
 	        res.add("#  #   ");
 	        res.add("#   #  ");
 	        res.add("#   #  ");
-	        res.add("###   ");
-	        res.add("#    ");
+	        res.add("###    ");
+	        res.add("#      ");
 	        res.add("#  #   ");
 	        res.add("#   #  ");
 	        res.add("#   #  ");
-	        res.add("#  #  ");
+	        res.add("####   ");
 	        return res;
 	    }
 }

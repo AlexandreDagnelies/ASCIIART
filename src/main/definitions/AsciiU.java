@@ -4,6 +4,8 @@ import java.util.ArrayList;
 public class AsciiU extends Letters {
 	public AsciiU() {
 		this.realLetter ="U";
+		this.pattern1 = generatePattern1();
+		this.pattern2 = generatePattern2();
 	
 	}
 	

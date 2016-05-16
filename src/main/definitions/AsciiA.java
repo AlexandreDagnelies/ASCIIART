@@ -4,19 +4,17 @@ import java.util.ArrayList;
 
 public class AsciiA extends Letters {
 
-	// Constructor
 		public AsciiA () {
 			this.realLetter ="A";
-			this.height = 3;
-			this.width = 5;
+			this.pattern1 = generatePattern1();
+		    this.pattern2 = generatePattern2();
 		
 		}
 
-		@Override
-		public ArrayList<String> printAsciiPatern1(ArrayList<String> pattern) {
+		public ArrayList<String> generatePattern1() {
 			ArrayList<String> res  = new ArrayList<String>();
 
-			res.add(" # ");
+			res.add(" #  ");
 			res.add("# # ");
 			res.add("### ");
 			res.add("# # ");
@@ -25,8 +23,7 @@ public class AsciiA extends Letters {
 			return res;
 		}
 
-		@Override
-		public ArrayList<String> printAsciiPatern2(ArrayList<String> pattern) {
+		public ArrayList<String> generatePattern2() {
 			ArrayList<String> res = new ArrayList<String>();
 
 			res.add("  ##   ");

@@ -4,6 +4,8 @@ import java.util.ArrayList;
 public class AsciiS extends Letters {
 	public AsciiS() {
 		this.realLetter ="S";
+		this.pattern1 = generatePattern1();
+		this.pattern2 = generatePattern2();
 	
 	}
 	

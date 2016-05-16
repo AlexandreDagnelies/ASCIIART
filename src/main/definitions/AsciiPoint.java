@@ -2,9 +2,11 @@ package main.definitions;
 
 import java.util.ArrayList;
 
-public class AsciiDefault extends Letters {
-	public AsciiDefault() {
+public class AsciiPoint extends Letters {
+	public AsciiPoint() {
 		this.realLetter ="?";
+		this.pattern1 = generatePattern1();
+	    this.pattern2 = generatePattern2();
 	
 	}
 	
