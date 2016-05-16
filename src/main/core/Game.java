@@ -12,7 +12,7 @@ public class Game extends Algo {
 
 	public static void main(String[] args) {
 		
-		String alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ?";
+		String alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 		
 		
 		/*
@@ -31,20 +31,18 @@ public class Game extends Algo {
 			//System.out.println(string);
 			
 		}*/
-		int height = Letters.getHeight();
+		String randomString = randomString(new Random(), "alphabet", 10);
+        System.out.println(randomString);
 		boolean nbrRandom = randomSize();
 		
-		ArrayList<String> coucou = algo(Letters.getWidth(),Letters.getHeight(), "@", randomPattern(nbrRandom));
-		 System.out.println(Letters.getHeight() );
+		ArrayList<String> algo = algo(Letters.getWidth(),Letters.getHeight(), randomString, printPattern(nbrRandom));
 		
-		 for (String string : coucou ){
+		
+		 for (String string : algo ){
 			System.out.println(string);
 			 
 			
 		}
-		//System.out.println(Letters.printAsciiPattern1());
-		//Letters.printAsciiPattern1();
-		
 	}
 	
 	
@@ -58,25 +56,38 @@ public class Game extends Algo {
         	Letters.setWidth(7);
         	Letters.setHeight(10);
         	return false;
-    		
         }
         
     }
-	public static  ArrayList<String> randomPattern(boolean random) {
+	public static  ArrayList<String> printPattern(boolean nbrRandom) {
 		ArrayList<String> ascii = new ArrayList<String>();
-        if (random) {
+        System.out.println("Height = " + Letters.getHeight());
+        System.out.println("Width = " + Letters.getWidth());
+        
+        if (nbrRandom) {
             for (String string : Letters.printAsciiPattern1() ){
     			ascii.add(string);
     		}
-            System.out.println("vrai");
         } else {
         	for (String string : Letters.printAsciiPattern2() ){
     			ascii.add(string);
     			
     		}
-        	System.out.println("faux");
         }
         return ascii;
     }
+	
+	/**
+	 * Generate a random string
+	 * 
+	 * @return String
+	 */
+	public static String randomString(Random rng, String characters, int length) {
+		char[] text = new char[length];
+	    for (int i = 0; i < length; i++) {
+	        text[i] = characters.charAt(rng.nextInt(characters.length()));
+	    }
+	    return new String(text);
+	}
 	
 }

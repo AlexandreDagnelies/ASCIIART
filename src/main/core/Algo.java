@@ -43,7 +43,6 @@ public class Algo {
 				
 				ArrayList<String> response = new ArrayList<String>();
 				String str = ""	;
-				System.out.println("ÇA C'EST HEIGHT -> " + height);
 				//pour chaque ligne
 				for(int j = 0; j < height; j++) {
 					str = ""	;
