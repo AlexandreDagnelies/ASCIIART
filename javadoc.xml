@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="javadoc">
+    <target name="javadoc">
+        <javadoc access="public" author="true" classpath="libs/slf4j-api-1.6.1.jar:libs/jyaml-1.3.jar:/Users/alexandre/.p2/pool/plugins/org.junit_4.12.0.v201504281640/junit.jar:/Users/alexandre/.p2/pool/plugins/org.hamcrest.core_1.3.0.v201303031735.jar:libs/commons-lang-2.6.jar:libs/slf4j-simple-1.6.1.jar:libs/javafaker-0.2.jar" destdir="doc" nodeprecated="false" nodeprecatedlist="false" noindex="false" nonavbar="false" notree="false" source="1.8" sourcefiles="src/main/core/Game.java" sourcepath="src" splitindex="true" use="true" version="true"/>
+    </target>
+</project>
